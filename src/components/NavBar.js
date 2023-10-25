@@ -16,20 +16,25 @@ const Navbar = () => {
         
         <nav>
         <Link to="/">
-          <h1>SIH Project</h1>
+          <h1>CareerPilot</h1>
+          
         </Link>
-          {user && (
-            <div>
-              <span>{user.email}</span>
-              <button onClick={handleClick}>Log out</button>
-            </div>
+         
+          
+          
+            <div className='navdiv'>
+            {!user && (
+            <Link to="/login"><p>Login</p></Link>
+            
           )}
-          {!user && (
-            <div>
-              <Link to="/login">Login</Link>
-              <Link to="/signup">Signup</Link>
+              <Link to="/students"><p>Students</p></Link>
+              <Link to="/parents"><p>Parents</p></Link>
+              <Link to="/careerlibrary"><p>Career Library</p></Link>
+              <Link to="/webinars"><p>Webinars</p></Link>
+              <Link to="/pricing"><p>Pricing</p></Link>
+              <Link to="/getstarted"><button>Get Started</button></Link>
             </div>
-          )}
+        
         </nav>
       </div>
     </header>

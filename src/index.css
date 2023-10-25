@@ -9,6 +9,12 @@ body {
   background: #f1f1f1;
   margin: 0;
   font-family: "Poppins";
+  background-image: url("https://img.freepik.com/free-vector/white-abstract-background_23-2148810112.jpg?w=996&t=st=1698148894~exp=1698149494~hmac=18d29419a768e312aec4c718211803e6fb0b29f260b84ec08ccce9054e562bc8");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: repeat-y;
+  overflow-x: hidden;
+  
 }
 header {
   background: #fff;
@@ -26,10 +32,68 @@ header a {
 
 /* homepage */
 .home {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 100px;
+  display: flex;
+  
+  padding: 20px;
+  flex-direction: column;
+  margin-top: 30vh;
+ 
+
+  
 }
+.home h1{
+  font-size: 30px;
+  font-weight: 700;
+  margin: -3px 0;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  color: #09023a;
+}
+
+.home h2{
+  font-size: 22px;
+  font-weight: 700;
+  margin: -3px 0;
+ 
+ 
+  color: #09023a;
+}
+.home h3 {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 0.1s;
+}
+.home-title{
+  width: 40vw;
+  height: 70vh;
+}
+.home-main{
+  display: flex;
+  justify-content: space-around;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 
 
 /* new workout form */
@@ -43,21 +107,43 @@ nav {
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  position: fixed; top: 0; left: 0; z-index: 9999;
+  background-color: white;
+  width: 100vw;
+  height: 10vh;
+ 
+  
+ 
+  
 }
 nav a, nav button {
   margin-left: 10px;
 }
-nav button {
-  background: #fff;
-  color: var(--primary);
-  border: 2px solid var(--primary);
+ button {
+  background: #100467;
+  color: white;
   padding: 6px 10px;
-  border-radius: 4px;
+  border-radius: 20px;
   font-family: "Poppins";
   cursor: pointer;
   font-size: 1em;
+  border-width: 0px;
 }
+
+nav div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50vw;
+}
+nav p:hover{
+  color: #2107e6;
+  font-weight: 500;
+ 
+  
+}
+
 
 
 /* auth forms */
@@ -68,6 +154,7 @@ form.signup, form.login {
   padding: 20px;
   background: #fff;
   border-radius: 4px;
+
 }
 
 .login-div{
@@ -75,6 +162,7 @@ form.signup, form.login {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 20vh;
 }
 
 /*login */
@@ -90,15 +178,7 @@ input {
   border-radius: 4px;
   box-sizing: border-box;
 }
-form button {
-  background: var(--primary);
-  border: 0;
-  color: #fff;
-  padding: 10px;
-  font-family: "Poppins";
-  border-radius: 4px;
-  cursor: pointer;
-}
+
 div.error {
   padding: 10px;
   background: #ffefef;
@@ -110,6 +190,115 @@ div.error {
 input.error {
   border: 1px solid var(--error);
 }
+
+
+.for-div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.for-sub-div{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 3vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 35vh;
+  width:55vh;
+  box-shadow: 1px 1px grey ;
+ 
+}
+.image{
+  height: 50vh;
+  
+  border-radius: 50%;
+}
+.for-sub-div h1{
+  font-size: 3vh;
+}
+.for-sub-div a{
+  font-size: 2vh;
+  text-decoration: underline;
+  color: #2107e6;
+}
+.path-div button{
+  background: #100467;
+  color: white;
+  padding: 6px 6px;
+  border-radius: 20px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 8px;
+  border-width: 0px;
+  
+
+}
+.bob{
+  position:absolute;
+}
+.path-div{
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  margin-top: 10vh;
+}
+.hr{
+  border-top:2px solid purple;
+}
+li{
+  list-style-type: circle;
+}
+.path-image{
+  height: 20vh;
+}
+.path-sub-div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 6vh;
+  padding: 3vh;
+ background-color: white;
+  width: 60vw;
+  
+  border-radius: 10px;
+  margin-left: 0;
+  margin-right: auto;
+  height: 30vh;
+
+}
+.path-sub-div2{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 6vh;
+  padding: 3vh;
+  background-color: white;
+  width: 60vw;
+ 
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: 0;
+  height: 30vh;
+
+}
+.wcu-section{
+  background-color: rgb(205, 224, 241);
+  padding: 5vh;
+  margin: 3vh;
+  height: 50vh;
+  width: 130vh;
+  text-align: center;
+  border-radius:54% 46% 56% 44% / 38% 38% 62% 62%  ;
+  margin: auto;
+  font-size: 2.5vh;
+  
+}
+
 
 
 @media  (max-width:600px) {
