@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { useLogout } from '../hooks/useLogout'
 import { useAuthContext } from '../hooks/useAuthContext'
+import {BsChevronDown} from "react-icons/bs"
+import image from "../Assets/Screenshot 2023-10-29 131918.png"
 
 const Navbar = () => {
   const { logout } = useLogout()
@@ -12,31 +14,39 @@ const Navbar = () => {
 
   return (
     <header>
-      <div className="container">
+      <img src={image} className='logo'/>
+
+      <nav className='navbar'>
+        <ul>
+          <li><a>Home</a></li>
+          <li><a>Students</a></li>
+          <li><a>Parents</a></li>
+          <li><a>Information Gateway <span><BsChevronDown></BsChevronDown></span></a>
+          
+            <ul>
+              <li><a>Webinars</a></li>
+              <li><a>Career Library</a></li>
+            </ul>
+          
+          </li>
+          <li><a>Partnerships <span><BsChevronDown></BsChevronDown></span></a>
+          
+            <ul>
+              <li><a>Educators</a></li>
+              <li><a>Corporates</a></li>
+              <li><a>Counsellors</a></li>
+            </ul>
+          
+          </li>
+
+          
+          <li><a><button>Get Started</button></a></li>
         
-        <nav>
-        <Link to="/">
-          <h1>CareerPilot</h1>
-          
-        </Link>
-         
-          
-          
-            <div className='navdiv'>
-            {!user && (
-            <Link to="/login"><p>Login</p></Link>
-            
-          )}
-              <Link to="/students"><p>Students</p></Link>
-              <Link to="/parents"><p>Parents</p></Link>
-              <Link to="/careerlibrary"><p>Career Library</p></Link>
-              <Link to="/webinars"><p>Webinars</p></Link>
-              <Link to="/pricing"><p>Pricing</p></Link>
-              <Link to="/getstarted"><button>Get Started</button></Link>
-            </div>
+        </ul>
         
-        </nav>
-      </div>
+      </nav>
+
+      
     </header>
   )
 }

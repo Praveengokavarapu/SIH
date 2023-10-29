@@ -40,14 +40,14 @@ const Home = () => {
           <h1>(Ages 14-21)</h1>
           <p>Our core audience seeking career guidance and
             personalized recommendations as they navigate through secondary education</p>
-          <a>Know More</a>
+          <button>Know More</button>
         </div>
         <div className='for-sub-div' data-aos="zoom-in">
           <h1>Parents and Guardians</h1>
           <p>Empowering parents and guardians with insights and
             resources to actively support their children's career
             decisions.</p>
-          <a>Know More</a>
+          <button>Know More</button>
         </div>
         <div className='for-sub-div' data-aos="zoom-in">
           <h1>Institutions and Colleges
@@ -56,7 +56,7 @@ const Home = () => {
             provide students with access to our career guidance
             platform.
           </p>
-          <a>Know More</a>
+          <button>Know More</button>
         </div>
 
       </div>

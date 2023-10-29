@@ -16,14 +16,7 @@ body {
   overflow-x: hidden;
   
 }
-header {
-  background: #fff;
-}
 
-header a {
-  color: #333;
-  text-decoration: none;
-}
 .pages{
   max-width: 1400px;
   padding: 20px;
@@ -100,26 +93,66 @@ header a {
 
 
 /* navbar */
-nav {
+header{
+  position: fixed;
+  top: 0;left: 0;right: 0;
+  background-color: #ffffff;
+  padding: 0px 7%;
   display: flex;
   align-items: center;
-  margin: 0 auto;
-  padding: 10px 20px;
-  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+}
+header .logo{
+height: 12vh;
+
+}
+
+header .navbar ul{
+  list-style: none;
+
+}
+
+header .navbar ul li{
+  position: relative;
+  float: left;
+  list-style: none;
+  
+}
+header .navbar ul li a{
+  padding: 20px;
+  display: block;
+ 
+  
+
+
+}
+
+header .navbar ul li ul{
+  position: absolute;
+  left: 0;
+  width: 180px;
+  background-color: #fff;
+  display: none;
+  
+
+}
+header .navbar ul li:hover > ul{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  position: fixed; top: 0; left: 0; z-index: 9999;
-  background-color: white;
-  width: 100vw;
-  height: 10vh;
- 
-  
- 
-  
+
 }
-nav a, nav button {
-  margin-left: 10px;
+header .navbar ul li:focus-within >ul,
+
+header .navbar ul li ul li{
+  width: 100%;
+  border-top: 1px solid rgba(0,0,0,.1);
 }
+
+
+
  button {
   background: #100467;
   color: white;
@@ -131,18 +164,15 @@ nav a, nav button {
   border-width: 0px;
 }
 
-nav div{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 50vw;
-}
-nav p:hover{
+
+nav a:hover{
   color: #2107e6;
-  font-weight: 500;
+  
+  cursor: pointer;
  
   
 }
+
 
 
 
@@ -237,6 +267,17 @@ input.error {
   border-width: 0px;
   
 
+}
+.for-sub-div button{
+  background: #100467;
+  color: white;
+  padding: 6px 6px;
+  border-radius: 20px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 10px;
+  border-width: 0px;
+  
 }
 .bob{
   position:absolute;
